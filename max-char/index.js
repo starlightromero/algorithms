@@ -9,7 +9,7 @@ const maxChar = str => {
   const strMap = {}
   let highest = 0
   for (const c of str) {
-    strMap[c] ? strMap[c] += 1 : strMap[c] = 1
+    strMap[c] = strMap[c] + 1 || 1
     highest = strMap[c] > strMap[highest] || highest === 0 ? c : highest
   }
   return highest
