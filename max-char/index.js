@@ -6,6 +6,9 @@
 // maxChar("apple 1231111") === "1"
 
 const maxChar = str => {
+  if (typeof str !== 'string') {
+    throw new Error('maxChar takes a parameter of type string!')
+  }
   const strMap = {}
   let highest = 0
   for (const c of str) {
